@@ -1,5 +1,7 @@
 ---
 const { title } = Astro.props;
+import { Icon } from 'astro-icon/components';
+
 ---
 
 <!doctype html>
@@ -12,47 +14,24 @@ const { title } = Astro.props;
 		<title>{title}</title>
 	</head>
 	<body>
-		<header>
-			<div class="container">
-				Este es el encabezado
+		<header class="h-16 bg-green-100 flex items-center ">
+			<div class="container  flex flex-row justify-between ax-w-[1200px] mx-auto">
+				<img src="/DuolingoLogo.svg" >
+				<a class="relative group flex flex-row items-center hover:text-[#50d71e] font-extrabold uppercase text-gray-400" href="#">
+					Idioma de la página
+					<Icon name="mdi:chevron-down" />
+					<div class="absolute top-6 hidden group-hover:block ">
+						Opciones de menú
+						Opciones de menú
+						Opciones de menú
+						Opciones de menú
+						Opciones de menú
+						Opciones de menú
+					</div>
+				</a>
 			</div>
 		</header>
 		<slot />
 
-		<footer class="container">
-			Este es el pie de pagina
-		</footer>
 	</body>
 </html>
-<style is:global>
-	footer{
-		background: pink;
-		height: 32px;
-	}
-	.container{
-		margin: 0 auto;
-		max-width: 800px;
-		background: orange;
-	}
-	header{
-		background: green;
-		height: 36px;
-	}
-
-	html, body{
-		margin: 0;
-		padding: 0;
-		font-family: system-ui, sans-serif;
-	}
-	code {
-		font-family:
-			Menlo,
-			Monaco,
-			Lucida Console,
-			Liberation Mono,
-			DejaVu Sans Mono,
-			Bitstream Vera Sans Mono,
-			Courier New,
-			monospace;
-	}
-</style>
