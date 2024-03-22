@@ -17,6 +17,8 @@
     "tailwindcss": "^3.4.1"
   },
   "devDependencies": {
-    "@iconify-json/mdi": "^1.1.64"
+    "@iconify-json/flagpack": "^1.1.14",
+    "@iconify-json/mdi": "^1.1.64",
+    "@iconify/tailwind": "^0.1.4"
   }
 }
