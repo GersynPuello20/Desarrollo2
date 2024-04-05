@@ -1,16 +1,20 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
+import { Icon } from 'astro-icon/components';
 
 const flags = [
-	{flag: ``, 
-	name:`Bandera 1`
+	{idioma: "FRANCÉS", 
+	bandera:`flagpack:gp`
 	},
-	{flag: ``, 
-	name:`Bandera 2`
+	{idioma: `INGLÉS`, 
+	bandera:`flagpack:us`
 	},
-	{flag: ``, 
-	name:`Bandera 3`
+	{idioma: `ESPAÑOL`, 
+	bandera:`flagpack:pt`
+	},
+	{idioma: `COREANO`, 
+	bandera: "flagpack:kr"
 	},
 	
 
@@ -20,6 +24,13 @@ const flags = [
 <Layout title="Duolingo Clone">
 
 	Este es mi contenido
-
+	<div class="h-16 border-2 border-[gray-100] flex items-center justify-center mt-20 font-bold text-gray-500 space-x-3 ">
+		{
+			flags.map((flag)=>
+			<Icon name={flag.bandera} size={40}/>
+			<span class="ml-3">{flag.idioma}</span>
+			)
+		}
+	</div>
 </Layout>
 

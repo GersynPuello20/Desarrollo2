@@ -17,14 +17,14 @@ import { Icon } from 'astro-icon/components';
 		<header class="h-16 bg-green-50 flex items-center ">
 			<div class="container  flex flex-row justify-between ax-w-[1200px] mx-auto">
 				<img src="/DuolingoLogo.svg" >
-				<a class="relative group flex flex-row items-center hover:text-[#50d71e] font-extrabold uppercase text-gray-400" href="#">
+				<a class="relative group flex flex-row items-center hover:text-[#50d71e] font-bold uppercase text-gray-400" href="#">
 					Idioma de la página
 					<Icon name="mdi:chevron-down" />
-					<div class="absolute top-6 hidden group-hover:block">
+					<div class="flex-col absolute top-6 hidden group-hover:block">
 						<h1>1</h1><Icon name="flagpack:gp" />
-						<h1>2</h1><Icon name="flagpack:gp" />
-						<h1>3</h1><Icon name="flagpack:gp" />
-						<h1>4</h1><Icon name="flagpack:gp" />
+						<h1>2</h1><Icon name="flagpack:us" />
+						<h1>3</h1><Icon name="flagpack:es" />
+						<h1>4</h1><Icon name="flagpack:pt" />
 						
 					</div>
 				</a>
@@ -47,7 +47,29 @@ import { Icon } from 'astro-icon/components';
 				
 			</div>
 		</div>
-		<Icon name="flagpack:gp" size={45}/>
+		
+		<!-- <div class="h-16 border-2 border-[gray-100] flex items-center justify-center mt-20 font-bold text-gray-500 space-x-3 ">
+			<a href="" class="flex items-center">
+				<Icon name="flagpack:gp" size={40}/>
+				<span class="ml-3">FRANCES</span>
+			</a>
+			<a href="" class="flex items-center">
+				<Icon name="flagpack:us" size={40}/>
+				<span class="ml-3">INGLES</span>
+			</a>
+			<a href="" class="flex items-center">
+				<Icon name="flagpack:es" size={40}/>
+				<span class="ml-3">ESPAÑOL</span>
+			</a>
+			<a href="" class="flex items-center">
+				<Icon name="flagpack:pt" size={40}/>
+				<span class="ml-3">PORTUGUES</span>
+			</a>
+			<a href="" class="flex items-center">
+				<Icon name="flagpack:qa" size={40}/>
+				<span class="ml-3">QATARI</span>
+			</a>
+		</div> -->
 
 		<slot />
 
