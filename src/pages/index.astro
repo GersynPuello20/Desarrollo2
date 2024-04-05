@@ -1,36 +1,26 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
-import { Icon } from 'astro-icon/components';
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
+import { Icon } from "astro-icon/components";
 
 const flags = [
-	{idioma: "FRANCÉS", 
-	bandera:`flagpack:gp`
-	},
-	{idioma: `INGLÉS`, 
-	bandera:`flagpack:us`
-	},
-	{idioma: `ESPAÑOL`, 
-	bandera:`flagpack:pt`
-	},
-	{idioma: `COREANO`, 
-	bandera: "flagpack:kr"
-	},
-	
-
-	]
+	{ idioma: "FRANCÉS", bandera: `flagpack:gp` },
+	{ idioma: `INGLÉS`, bandera: `flagpack:us` },
+	{ idioma: `ESPAÑOL`, bandera: `flagpack:pt` },
+	{ idioma: `COREANO`, bandera: "flagpack:kr" },
+];
 ---
 
 <Layout title="Duolingo Clone">
-
 	Este es mi contenido
-	<div class="h-16 border-2 border-[gray-100] flex items-center justify-center mt-20 font-bold text-gray-500 space-x-3 ">
+	<div class="h-16 border-2 border-[gray-100] flex items-center justify-center mt-20 font-bold text-gray-500 space-x-3">
 		{
-			flags.map((flag)=>
-			<Icon name={flag.bandera} size={40}/>
-			<span class="ml-3">{flag.idioma}</span>
-			)
+			flags.map((flag) => (
+				<a href="" class="flex items-center flex-row ">
+					<Icon name={flag.bandera} size={40} />
+					<span class="ml-3">{flag.idioma}</span>
+				</a>
+			))
 		}
 	</div>
 </Layout>
-
